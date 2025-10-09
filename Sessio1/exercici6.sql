@@ -1,5 +1,5 @@
 -- exercici6.sql
-CONNECT ESPECTACLES/grupXX;
+CONNECT ESPECTACLES/grup02;
 
 -- TRIGGER: tr_cap_zones_up
 -- Incrementa la capacitat del recinte quan s'insereix un seient
@@ -30,3 +30,4 @@ SHOW ERRORS;
 -- Donar permís al usuariTest per fer la validació
 GRANT SELECT, INSERT, DELETE ON SEIENTS TO usuariTest;
 GRANT SELECT ON RECINTES TO usuariTest;
+
