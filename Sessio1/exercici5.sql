@@ -1,7 +1,13 @@
 -- exercici5.sql
 -- Crear usuario ESPECTACLES y asignar rol
 
-CREATE USER ESPECTACLES IDENTIFIED BY grup02;
+CREATE USER ESPECTACLES IDENTIFIED BY grup02
+PROFILE perfil_dev
+DEFAULT TABLESPACE users
+QUOTA UNLIMITED ON users;
+
+GRANT rol_dev TO ESPECTACLES;
+ALTER USER ESPECTACLES DEFAULT ROLE rol_dev;
 GRANT CONNECT, RESOURCE TO ESPECTACLES;
 
 -- Si ya tienes un rol específico como "Gestor" o "Desenvolupador", podrías usar:
@@ -35,4 +41,3 @@ END;
 
 -- Dar permisos de ejecución a usuariTest
 GRANT EXECUTE ON llistatEspectacles TO usuariTest;
-
