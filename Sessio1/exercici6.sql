@@ -30,4 +30,3 @@ SHOW ERRORS;
 -- Donar permís al usuariTest per fer la validació
 GRANT SELECT, INSERT, DELETE ON SEIENTS TO usuariTest;
 GRANT SELECT ON RECINTES TO usuariTest;
-
