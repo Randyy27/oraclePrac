@@ -1,5 +1,5 @@
 -- valida_exercici6.sql
-CONNECT usuariTest/grupXX;
+CONNECT usuariTest/grup02;
 SET SERVEROUTPUT ON;
 
 DECLARE
