@@ -32,9 +32,9 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Capacitat després d''inserir: ' || v_capacitat_despres);
 
     IF v_capacitat_despres = v_capacitat_abans + 1 THEN
-        DBMS_OUTPUT.PUT_LINE('✅ Trigger tr_cap_zones_up OK');
+        DBMS_OUTPUT.PUT_LINE(' Trigger tr_cap_zones_up OK');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('❌ Error en tr_cap_zones_up');
+        DBMS_OUTPUT.PUT_LINE(' Error en tr_cap_zones_up');
     END IF;
 
     -- Esborrar el seient afegit
@@ -48,9 +48,10 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Capacitat després d''esborrar: ' || v_capacitat_despres);
 
     IF v_capacitat_despres = v_capacitat_abans THEN
-        DBMS_OUTPUT.PUT_LINE('✅ Trigger tr_cap_zones_down OK');
+        DBMS_OUTPUT.PUT_LINE(' Trigger tr_cap_zones_down OK');
     ELSE
-        DBMS_OUTPUT.PUT_LINE('❌ Error en tr_cap_zones_down');
+        DBMS_OUTPUT.PUT_LINE(' Error en tr_cap_zones_down');
     END IF;
 END;
 /
+
