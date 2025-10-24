@@ -1,0 +1,14 @@
+RUN {
+  ALLOCATE CHANNEL c1 DEVICE TYPE DISK;
+
+  # Còpia completa comprimida + archivelogs
+  BACKUP AS COMPRESSED BACKUPSET DATABASE PLUS ARCHIVELOG
+    FORMAT '/home/oracle/backup/full_%U.bkp'
+    TAG='FULL_BACKUP_ORACLE2';
+
+  # Eliminació de còpies i arxius antics
+  DELETE NOPROMPT OBSOLETE;
+  DELETE NOPROMPT ARCHIVELOG ALL COMPLETED BEFORE 'SYSDATE-7';
+
+  RELEASE CHANNEL c1;
+}
